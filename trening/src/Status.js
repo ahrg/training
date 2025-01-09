@@ -58,11 +58,7 @@ const Status = ({ setSelectedDay }) => {
                 <td>{day.day}</td>
 
                 <td onClick={() => setSelectedDay(`day${day.day}`)} style={{ cursor: 'pointer', color: 'blue' }}>
-                  {day.focus}
-                </td>
-
-                {/* Focus */}
-                <td>
+ 
                   {day.isEditing ? (
                     <input
                       type="text"
