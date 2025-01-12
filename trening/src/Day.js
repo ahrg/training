@@ -70,7 +70,7 @@ const Day = ({
               </td>
               {isEditing && (
                 <td>
-                  <button onClick={() => removeExercise(dayName, index)}>
+                  <button onClick={() => removeExercise(index)}>
                     Remove
                   </button>
                 </td>
