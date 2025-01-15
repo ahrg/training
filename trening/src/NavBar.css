@@ -1,0 +1,15 @@
+.WorkoutNavBar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.WorkoutNavButton {
+padding: 10px 20px;
+cursor: pointer;
+background: #007BFF;
+color: #fff;
+border: none;
+border-radius: 5px;
+}

@@ -7,7 +7,7 @@ import Routine from './Routine';
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="body">
         {/* Include NavBar here */}
         <NavBar />
 

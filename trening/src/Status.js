@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import './Status.css'
 
 const Status = ({ setSelectedDay }) => {
   // State for the workout program, defaulting to 'Pending' for every day
@@ -40,24 +41,26 @@ const Status = ({ setSelectedDay }) => {
       <header>
         <h1>My Workout Program</h1>
       </header>
-
-      <main>
+      <div className="status-container">
+      <main class="status-main status-color">
         <table>
+        
           <thead>
-            <tr>
-              <th>Day</th>
-              <th>Focus</th>
-              <th>Status</th>
-              <th>Action</th>
-            </tr>
-          </thead>
+              <tr className ="status-tr">
+                <th>Day</th>
+                <th>Focus</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+          
           <tbody>
             {workoutDays.map((day, index) => (
               <tr key={day.day}>
                 {/* Day */}
                 <td>{day.day}</td>
 
-                <td onClick={() => setSelectedDay(`day${day.day}`)} style={{ cursor: 'pointer', color: 'blue' }}>
+                <td onClick={() => setSelectedDay(`day${day.day}`)} className="days">
  
                   {day.isEditing ? (
                     <input
@@ -93,6 +96,7 @@ const Status = ({ setSelectedDay }) => {
           </tbody>
         </table>
       </main>
+      </div>
     </div>
   );
 };
