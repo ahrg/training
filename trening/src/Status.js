@@ -37,67 +37,67 @@ const Status = ({ setSelectedDay }) => {
   };
 
   return (
-    <div>
-      <header>
-        <h1>My Workout Program</h1>
-      </header>
-      <div className="status-container">
-      <main class="status-main status-color">
-        <table>
-        
-          <thead>
-              <tr className ="status-tr">
-                <th>Day</th>
-                <th>Focus</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-          
-          <tbody>
-            {workoutDays.map((day, index) => (
-              <tr key={day.day}>
-                {/* Day */}
-                <td>{day.day}</td>
+<div>
+  <header>
+    <h1>My Workout Program</h1>
+  </header>
+  <div className="status-container">
+    <main className="status-main color">
+      <div className="status-table" role="table">
+        {/* Header */}
+        <div className="status-row-t status-header" role="row">
+          <div className="status-cell status-day" role="columnheader">Day</div>
+          <div className="status-cell status-focus" role="columnheader">Focus</div>
+          <div className="status-cell status-status" role="columnheader">Status</div>
+          <div className="status-cell status-action" role="columnheader">Action</div>
+        </div>
 
-                <td onClick={() => setSelectedDay(`day${day.day}`)} className="days">
- 
-                  {day.isEditing ? (
-                    <input
-                      type="text"
-                      value={day.focus}
-                      onChange={(e) => handleFocusChange(index, e.target.value)}
-                    />
-                  ) : (
-                    day.focus
-                  )}
-                </td>
+        {/* Body */}
+        {workoutDays.map((day, index) => (
+          <div className="status-row" key={day.day} role="row">
+            <div className="status-cell status-day" role="cell">{day.day}</div>
+            
+            <div className="status-cell status-focus" role="cell" onClick={() => setSelectedDay(`day${day.day}`)}>
+              {day.isEditing ? (
+                <input
+                  type="text"
+                  value={day.focus}
+                  onChange={(e) => handleFocusChange(index, e.target.value)}
+                  className="status-input"
+                />
+              ) : (
+                day.focus
+              )}
+            </div>
 
-                {/* Status */}
-                <td>
-                  <label>
-                    <input
-                      type="checkbox"
-                      checked={day.status === 'Completed'}
-                      onChange={() => handleCheckboxChange(index)}
-                    />
-                    {day.status}
-                  </label>
-                </td>
+            <div className="status-cell status-status" role="cell">
+              <label>
+                <input
+                  type="checkbox"
+                  className="cursor"
+                  checked={day.status === "Completed"}
+                  onChange={() => handleCheckboxChange(index)}
+                />
+                {day.status}
+              </label>
+            </div>
 
-                {/* Edit Button */}
-                <td>
-                  <button onClick={() => toggleEdit(index)}>
-                    {day.isEditing ? 'Save' : 'Edit'}
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </main>
+            <div className="status-cell status-action" role="cell">
+              <button
+                onClick={() => toggleEdit(index)}
+                className="status-button"
+              >
+                {day.isEditing ? "Save" : "Edit"}
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
+    </main>
+  </div>
+</div>
+
+
   );
 };
 

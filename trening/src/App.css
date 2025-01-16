@@ -1,6 +1,5 @@
 * {
     color: white; /* Makes all text white */
-    font-family: Arial, sans-serif; /* Set a default font */
   }
 
 .root, html, body {
@@ -25,3 +24,5 @@
 h1 {
     text-align: center;
 }
+
+

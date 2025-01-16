@@ -3,11 +3,9 @@ import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <div className='navBar'>
-        <div className='stocks'>
-            <Link to="./WorkoutProgram">Workout Program</Link>
-            <Link to="./Rotuine">Routine</Link>
-        </div>
+        <div className='NavBar color'>
+            <Link to="./WorkoutProgram" className="NavButton">Workout Program</Link>
+            <Link to="./Rotuine" className="NavButton">Routine</Link>
         </div>
     );
 };
