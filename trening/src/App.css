@@ -25,4 +25,29 @@ h1 {
     text-align: center;
 }
 
+input {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark gray text */
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 8px;
+  }
 
+  input:focus {
+    border: 2px solid #007BFF; /* Blue border for focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow */
+  }
+
+
+button {
+    background-color: #e63225;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2px;
+  }

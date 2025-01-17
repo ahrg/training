@@ -1,0 +1,31 @@
+.day-container {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+
+.day-child-container {
+    width: 80%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+table {
+    border-spacing: 0px; /* Adds space between rows */
+    width: 100%; /* Keeps the table width consistent */
+  }
+  
+
+
+  td {
+    padding: 3px; /* Adds space inside each cell */
+  }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Day.css'
 
 const Day = ({ 
   dayName, 
@@ -11,7 +12,8 @@ const Day = ({
   displayName
 }) => {
   return (
-    <div>
+    <div className="day-container">
+      <div className="day-child-container color">
       <h2>{displayName}</h2>
       <table>
         <thead>
@@ -83,6 +85,7 @@ const Day = ({
       <button onClick={() => toggleEdit(dayName)}>
         {isEditing ? 'Save' : 'Edit'}
       </button>
+      </div>
     </div>
   );
 };
