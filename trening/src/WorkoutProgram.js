@@ -6,12 +6,7 @@ import Status from './Status';
 // Kommenter koden
 // Sjekke ut og practice navbars
 
-// Feil
-// Når jeg klikker remove så fjernes øverste istedenfor det objektet.
 
-// 4. Design og brukervennlighet: 
-//    - Style nettsiden for bedre utseende. 
-//    - Når jeg klikker på handstand (dag1) så scroller den også ned
 //    - Sørge for at den er responsiv for mobilvisning. 
 
 
