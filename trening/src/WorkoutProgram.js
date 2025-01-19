@@ -84,7 +84,8 @@ const WorkoutProgram = () => {
   };
 
   const sendToDiscordWithFile = async () => {
-    const webhookURL = "https://discord.com/api/webhooks/1327259330788986933/RQ7EOWxhWnXxmVbIaXfYsm1PGzNP6lHIY_cYTP1sAd4pxTYVbVLBHoKBe5dCY-OZHJyj";
+    const webhookURL = process.env.REACT_APP_WEBHOOK_URL;
+
   
     // Format workout data into a more readable structure
     let fileContent = '';
