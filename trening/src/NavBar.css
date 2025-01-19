@@ -6,22 +6,20 @@
 }
 
 .WorkoutNavButton {
-padding: 10px 20px;
-cursor: pointer;
-background: #e63225;
-color: #fff;
-border: none;
-border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #e63225;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
 
-
 .NavBar {
-    display: flex;                   /* Use flexbox for layout */
-    justify-content: center;          /* Centers the items horizontally */
-    align-items: center;              /* Align items vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #333;
-    padding: 10px 20px;               /* Add padding for spacing */
-    position: fixed;
+    padding: 10px 20px;
     top: 0;
     left: 0;
     right: 0;
@@ -31,15 +29,31 @@ border-radius: 5px;
 .NavButton {
     padding: 10px 20px;
     cursor: pointer;
-    color: #fff;                     /* White text */
+    color: #fff;
     border: none;
-    border-radius: 5px;              /* Rounded corners */
-    text-decoration: none;           /* Remove underline from links */
-    margin: 0 10px;                  /* Add some space between the buttons */
-    transition: background 0.3s;     /* Smooth hover effect */
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: background 0.3s;
 }
 
 /* Hover Effect */
 .NavButton:hover {
-    background: #c12922;             /* Darken the background on hover */
+    background: #c12922;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .WorkoutNavBar {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .WorkoutNavButton {
+        width: 40%;
+        border-radius: 15px;
+    }
 }

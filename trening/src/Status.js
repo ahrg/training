@@ -38,9 +38,7 @@ const Status = ({ setSelectedDay }) => {
 
   return (
 <div>
-  <header>
-    <h1>My Workout Program</h1>
-  </header>
+
   <div className="status-container">
     <main className="status-main color">
       <div className="status-table" role="table">

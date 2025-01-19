@@ -137,3 +137,25 @@
     color: #333; /* Dark text for readability */
     transition: all 0.2s ease-in-out; /* Smooth transition */
   }
+
+  @media (max-width: 768px) {
+    .status-input {
+      width: 100%;
+      font-size: 0.9rem;
+  }
+
+  .status-button {
+      width: 100%;
+  }
+  .status-header-cell,
+  .status-cell {
+      text-align: left;
+      font-size: 0.8rem;
+      padding: 10px;
+  }
+
+  .status-input {
+    width: 100%;
+    font-size: 0.8rem;
+}
+}

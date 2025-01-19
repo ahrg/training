@@ -1,31 +1,50 @@
 .day-container {
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-
 .day-child-container {
-    width: 80%;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
+  width: 80%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 table {
-    border-spacing: 0px; /* Adds space between rows */
-    width: 100%; /* Keeps the table width consistent */
-  }
-  
+  border-spacing: 0px; /* Adds space between rows */
+  width: 100%; /* Keeps the table width consistent */
+}
 
+td {
+  padding: 3px; /* Adds space inside each cell */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .day-container {
+      flex-direction: column; /* Adjusts layout for smaller screens */
+      padding: 10px; /* Adds space around the container */
+  }
+
+  .day-child-container {
+      width: 95%; /* Reduces width to fit smaller screens */
+      padding: 10px; /* Reduces padding for better spacing */
+  }
+
+  table {
+      font-size: 0.85rem; /* Reduces font size for smaller screens */
+      width: 100%; /* Ensures the table fits within the container */
+  }
 
   td {
-    padding: 3px; /* Adds space inside each cell */
+      padding: 2px; /* Adds smaller padding for compact design */
+      
   }
+  input {
+    width: 80%;
+  }
+}
