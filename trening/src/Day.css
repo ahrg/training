@@ -31,8 +31,8 @@ td {
   }
 
   .day-child-container {
-      width: 80%; /* Reduces width to fit smaller screens */
-      padding: 10px; /* Reduces padding for better spacing */
+      width: 70%; /* Reduces width to fit smaller screens */
+      padding: 2px; /* Reduces padding for better spacing */
   }
 
   table {
