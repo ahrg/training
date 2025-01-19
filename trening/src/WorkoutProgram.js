@@ -134,7 +134,7 @@ const WorkoutProgram = () => {
   return (
     <div>
       <Status setSelectedDay={setSelectedDay} />
-      <WorkoutNavbar days={days} setSelectedDay={setSelectedDay} />
+      
       
       <main>
         <Day
@@ -165,6 +165,7 @@ const WorkoutProgram = () => {
         >
           Submit Workout to Discord
         </button>
+        <WorkoutNavbar days={days} setSelectedDay={setSelectedDay} />
       </div>
     </div>
   );

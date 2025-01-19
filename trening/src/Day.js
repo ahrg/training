@@ -81,10 +81,12 @@ const Day = ({
           ))}
         </tbody>
       </table>
-      <button onClick={() => addExercise(dayName)}>Add Exercise</button>
-      <button onClick={() => toggleEdit(dayName)}>
-        {isEditing ? 'Save' : 'Edit'}
+      <div className="day-flex-buttons">
+        <button onClick={() => addExercise(dayName)}>Add Exercise</button>
+        <button onClick={() => toggleEdit(dayName)}>
+          {isEditing ? 'Save' : 'Edit'}
       </button>
+      </div>
       </div>
     </div>
   );

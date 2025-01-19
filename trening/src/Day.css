@@ -27,13 +27,13 @@ td {
 @media (max-width: 768px) {
   .day-container {
       flex-direction: column; /* Adjusts layout for smaller screens */
-      padding: 10px; /* Adds space around the container */
-      width: 90%;
+
+      width: 100%;
   }
 
   .day-child-container {
-      width: 90%; /* Reduces width to fit smaller screens */
-      padding: 5px; /* Reduces padding for better spacing */
+      width: 100%; /* Reduces width to fit smaller screens */
+
   }
 
   table {
@@ -48,4 +48,20 @@ td {
   input {
     width: 80%;
   }
+
+}
+
+.day-flex-buttons {
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 5px; /* Space between buttons (optional) */
+}
+
+.day-flex-buttons button {
+  width: 100%;
+  height: 5vh;
+  font-size: 0.6rem;
+  background-color: #e63225;
+  
 }

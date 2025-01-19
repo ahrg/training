@@ -47,7 +47,7 @@
     .WorkoutNavBar {
         flex-direction: column;
         gap: 5px;
-        width: 100%;
+        width: 90%;
         align-items: center;
     }
 
