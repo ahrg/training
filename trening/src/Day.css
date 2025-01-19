@@ -31,7 +31,7 @@ td {
   }
 
   .day-child-container {
-      width: 95%; /* Reduces width to fit smaller screens */
+      width: 90%; /* Reduces width to fit smaller screens */
       padding: 10px; /* Reduces padding for better spacing */
   }
 
