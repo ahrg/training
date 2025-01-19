@@ -2,7 +2,9 @@
     color: white; /* Makes all text white */
   }
 
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
   
