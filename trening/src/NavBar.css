@@ -37,12 +37,12 @@
     transition: background 0.3s;
 }
 
-/* Hover Effect */
+
 .NavButton:hover {
     background: #c12922;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .WorkoutNavBar {
         flex-direction: column;

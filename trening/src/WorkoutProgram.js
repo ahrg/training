@@ -3,11 +3,14 @@ import Day from './Day';
 import WorkoutNavbar from './WorkoutNavbar';
 import Status from './Status';
 
+// To Do List
 // Kommenter koden
 // Sjekke ut og practice navbars
 
 
 //    - Sørge for at den er responsiv for mobilvisning. 
+//   -  Få til en backend for å lagre workouten i en database.
+//   -  Bruke informasjonen fra databasen til å lage en tracker for progress
 
 
 const loadExercisesFromStorage = () => {

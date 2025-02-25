@@ -15,34 +15,34 @@
 }
 
 table {
-  border-spacing: 0px; /* Adds space between rows */
-  width: 100%; /* Keeps the table width consistent */
+  border-spacing: 0px; 
+  width: 100%; 
 }
 
 td {
-  padding: 3px; /* Adds space inside each cell */
+  padding: 3px; 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .day-container {
-      flex-direction: column; /* Adjusts layout for smaller screens */
+      flex-direction: column; 
 
       width: 100%;
   }
 
   .day-child-container {
-      width: 100%; /* Reduces width to fit smaller screens */
+      width: 100%; 
 
   }
 
   table {
-      font-size: 0.85rem; /* Reduces font size for smaller screens */
-      width: 100%; /* Ensures the table fits within the container */
+      font-size: 0.85rem; 
+      width: 100%; 
   }
 
   td {
-      padding: 2px; /* Adds smaller padding for compact design */
+      padding: 2px;
       
   }
   input {
@@ -52,10 +52,10 @@ td {
 }
 
 .day-flex-buttons {
-  display: flex; /* Flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center buttons horizontally */
-  gap: 5px; /* Space between buttons (optional) */
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 5px; 
 }
 
 .day-flex-buttons button {

@@ -20,18 +20,17 @@
 }
 
 .color {
-    background: #C655BE; /* Fallback for old browsers */
-    background: -moz-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Firefox 3.6+ */
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#131414), color-stop(100%,#2f2530)); /* Chrome,Safari 4+ */
-    background: -webkit-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Chrome 10+, Safari 5.1+ */
-    background: -o-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(to top, #131414 0%, #2f2530 100%); /* IE10+ */
-    background: linear-gradient(to top, #131414 0%, #2f2530 100%); /* W3C, standard */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), /* Main shadow */
-    10px 5px 50px rgba(0, 0, 0, 100);   /* Secondary subtle shadow */
-    border-radius: 50px; /* Optional for rounded corners */
+    background: #C655BE; 
+    background: -moz-linear-gradient(to top, #131414 0%, #2f2530 100%);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#131414), color-stop(100%,#2f2530));
+    background: -webkit-linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    background: -o-linear-gradient(to top, #131414 0%, #2f2530 100%);
+    background: -ms-linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    background: linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), 
+    10px 5px 50px rgba(0, 0, 0, 100);  
+    border-radius: 50px; 
 }
-
 
   
   

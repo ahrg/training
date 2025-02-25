@@ -1,10 +1,10 @@
 * {
-    color: white; /* Makes all text white */
+    color: white; 
   }
 
 
   body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
   }
 
 .root, html, body {
@@ -14,15 +14,15 @@
     padding: 0;
 }
 .body {
-    background: #C655BE; /* Fallback for old browsers */
-    background: -moz-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Firefox 3.6+ */
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#131414), color-stop(100%,#2f2530)); /* Chrome,Safari 4+ */
-    background: -webkit-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Chrome 10+, Safari 5.1+ */
-    background: -o-linear-gradient(to top, #131414 0%, #2f2530 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(to top, #131414 0%, #2f2530 100%); /* IE10+ */
-    background: linear-gradient(to top, #131414 0%, #2f2530 100%); /* W3C, standard */
+    background: #C655BE; 
+    background: -moz-linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#131414), color-stop(100%,#2f2530)); 
+    background: -webkit-linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    background: -o-linear-gradient(to top, #131414 0%, #2f2530 100%); 
+    background: -ms-linear-gradient(to top, #131414 0%, #2f2530 100%);
+    background: linear-gradient(to top, #131414 0%, #2f2530 100%); 
     width: 100%;
-    min-height: 100vh; /* Ensure body covers entire viewport height */
+    min-height: 100vh; 
 }
 
 
@@ -31,17 +31,17 @@ h1 {
 }
 
 input {
-    background-color: #fff; /* White background */
-    color: #333; /* Dark gray text */
+    background-color: #fff; 
+    color: #333; 
     border: 1px solid #ccc;
     text-align: center;
     border-radius: 8px;
   }
 
   input:focus {
-    border: 2px solid #007BFF; /* Blue border for focus */
+    border: 2px solid #007BFF; 
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   }
 
 
