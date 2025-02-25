@@ -90,33 +90,33 @@ const WorkoutProgram = () => {
     const webhookURL = process.env.REACT_APP_WEBHOOK_URL;
 
   
-    // Format workout data into a more readable structure
+  
     let fileContent = '';
   
-    // Add the header for the table
+  
     fileContent += `Day                          Sets         RPE     Comment\n`;
     fileContent += `---------------------------------------------------------------\n`;
   
-    // Iterate over each day and format its exercises
+
     Object.keys(daysExercises).forEach(day => {
-      // Add day header (e.g., Day 1, Day 2)
+
       fileContent += `\n${day.toUpperCase().replace('DAY', 'Day ')}\n`;
       
-      // Add exercises for that day, aligned in columns
+
       daysExercises[day].forEach((exercise, index) => {
-        // Format each exercise's details into a structured line
+
         fileContent += `${exercise.Exercise.padEnd(30)} ${exercise.Sets.padEnd(12)} ${exercise.Rpe.padEnd(8)} ${exercise.Comment}\n`;
       });
       
-      // Add a separator between days for clarity
+
       fileContent += `---------------------------------------------------------------\n`;
     });
   
-    // Prepare the file as a Blob (plain text file)
+  
     const formData = new FormData();
     formData.append('file', new Blob([fileContent], { type: 'text/plain' }), 'workout_data.txt');
   
-    // Send the file via webhook
+
     try {
       const response = await fetch(webhookURL, {
         method: 'POST',
@@ -153,7 +153,7 @@ const WorkoutProgram = () => {
         />
       </main>
 
-      {/* Submit Button */}
+
       <div style={{ textAlign: 'center', marginTop: '20px' }}>
         <button
           onClick={sendToDiscordWithFile}
