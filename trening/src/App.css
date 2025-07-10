@@ -1,58 +1,516 @@
-* {
-    color: white; 
-  }
-
-
-  body {
-    overflow-x: hidden; 
-  }
-
-.root, html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-.body {
-    background: #C655BE; 
-    background: -moz-linear-gradient(to top, #131414 0%, #2f2530 100%); 
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0%,#131414), color-stop(100%,#2f2530)); 
-    background: -webkit-linear-gradient(to top, #131414 0%, #2f2530 100%); 
-    background: -o-linear-gradient(to top, #131414 0%, #2f2530 100%); 
-    background: -ms-linear-gradient(to top, #131414 0%, #2f2530 100%);
-    background: linear-gradient(to top, #131414 0%, #2f2530 100%); 
-    width: 100%;
-    min-height: 100vh; 
+.exercise-name {
+  font-weight: 600;
+  color: #fff;
 }
 
-
-h1 {
-    text-align: center;
+.exercise-name.editable {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-input {
-    background-color: #fff; 
-    color: #333; 
-    border: 1px solid #ccc;
-    text-align: center;
-    border-radius: 8px;
-  }
+.exercise-name.editable:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
 
-  input:focus {
-    border: 2px solid #007BFF; 
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
+.sets-reps {
+  color: #cbd5e0;
+  font-weight: 500;
+}
 
+.rpe-input:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
 
-button {
-    background-color: #e63225;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-bottom: 2px;
+.comment-input:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.comment-input::placeholder {
+  color: #a0aec0;
+}
+
+.exercise-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.submit-workout {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 210, 211, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 210, 211, 0.4);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #a0aec0;
+}
+
+.empty-state h3 {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}.day-number {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.day-focus {
+  color: #fff;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8em;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e94560, #f27121);
+  color: #fff;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(233, 69, 96, 0.3);
+}
+
+.status-badge.completed {
+  background: linear-gradient(135deg, #00d2d3, #54a0ff);
+  box-shadow: 0 4px 10px rgba(0, 210, 211, 0.3);
+}
+
+.btn {
+  background: linear-gradient(135deg, #e94560 0%, #f27121 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+  box-shadow: 0 4px 15px rgba(15, 52, 96, 0.3);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 8px 25px rgba(15, 52, 96, 0.4);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8em;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff3742, #ff5722);
+  box-shadow: 0 4px 15px rgba(255, 55, 66, 0.3);
+}
+
+.btn-danger:hover {
+  box-shadow: 0 8px 25px rgba(255, 55, 66, 0.4);
+}/* WorkoutProgram.css - Component Styling */
+
+.container {
+  width: 90%; /* Redusert fra 70% for å matche HTML bedre */
+  max-width: 1200px; /* Legg til maksbredde som i HTML */
+  margin: 0 auto;
+  padding: 0 1rem;
+  min-width: 320px;
+}
+
+/* Schedule Table */
+.schedule-table {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 20px;
+  padding: 25px; /* Tilbake til original padding */
+  margin-bottom: 30px; /* Tilbake til original margin */
+  box-shadow: 0 20px 40px rgba(233, 69, 96, 0.1);
+  width: 100%;
+}
+
+.schedule-header {
+  display: grid;
+  grid-template-columns: 80px 1fr 150px 120px; /* Tilbake til original kolonner */
+  gap: 20px; /* Tilbake til original gap */
+  padding: 15px 0;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.4);
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  width: 100%;
+}
+
+.schedule-list {
+  width: 100%;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 150px 120px; /* Tilbake til original kolonner */
+  gap: 20px; /* Tilbake til original gap */
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.schedule-row:hover {
+  background: rgba(233, 69, 96, 0.1);
+  transform: translateY(-2px);
+}
+
+.schedule-row.active {
+  background: linear-gradient(135deg, #e94560 0%, #f27121 100%);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+  transform: translateY(-2px);
+}
+
+.schedule-row:hover {
+  background: rgba(233, 69, 96, 0.1);
+  transform: translateY(-2px);
+}
+
+.schedule-row.active {
+  background: linear-gradient(135deg, #e94560 0%, #f27121 100%);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+  transform: translateY(-2px);
+}
+
+.day-number {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.day-focus {
+  color: #fff;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8em;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e94560, #f27121);
+  color: #fff;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(233, 69, 96, 0.3);
+}
+
+.status-badge.completed {
+  background: linear-gradient(135deg, #00d2d3, #54a0ff);
+  box-shadow: 0 4px 10px rgba(0, 210, 211, 0.3);
+}
+
+.btn {
+  background: linear-gradient(135deg, #e94560 0%, #f27121 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9em;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(233, 69, 96, 0.4);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #0f3460, #16213e);
+  box-shadow: 0 4px 15px rgba(15, 52, 96, 0.3);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 8px 25px rgba(15, 52, 96, 0.4);
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8em;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff3742, #ff5722);
+  box-shadow: 0 4px 15px rgba(255, 55, 66, 0.3);
+}
+
+.btn-danger:hover {
+  box-shadow: 0 8px 25px rgba(255, 55, 66, 0.4);
+}
+
+/* Workout Detail */
+.workout-detail {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 20px;
+  padding: 25px; /* Tilbake til original padding */
+  margin-bottom: 30px; /* Tilbake til original margin */
+  box-shadow: 0 20px 40px rgba(233, 69, 96, 0.1);
+  width: 100%;
+}
+
+.workout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Tilbake til original margin */
+  width: 100%;
+}
+
+.workout-title {
+  font-size: 2.2em; /* Tilbake til original størrelse */
+  font-weight: bold;
+  background: linear-gradient(135deg, #e94560 0%, #f27121 50%, #ff9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.add-exercise-btn {
+  background: linear-gradient(135deg, #e94560 0%, #f27121 100%);
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.exercise-header {
+  display: grid;
+  grid-template-columns: 300px 120px 150px 300px auto; /* Tilbake til original kolonner */
+  gap: 20px; /* Tilbake til original gap */
+  padding: 15px 0;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.4);
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+  width: 100%;
+}
+
+.exercises-list {
+  width: 100%;
+}
+
+.exercise-row {
+  display: grid;
+  grid-template-columns: 300px 120px 150px 300px auto; /* Tilbake til original kolonner */
+  gap: 20px; /* Tilbake til original gap */
+  align-items: center;
+  padding: 20px 0; /* Tilbake til original padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.exercise-row:hover {
+  background: rgba(233, 69, 96, 0.05);
+  transform: translateY(-1px);
+}
+
+.exercise-row:hover {
+  background: rgba(233, 69, 96, 0.05);
+  transform: translateY(-1px);
+}
+
+.exercise-name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.exercise-name.editable {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.exercise-name.editable:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
+
+.sets-reps {
+  color: #cbd5e0;
+  font-weight: 500;
+}
+
+.rpe-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rpe-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 10px 12px;
+  color: #fff;
+  text-align: center;
+  width: 65px;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.rpe-input:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.comments-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 0.9em;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.comment-input::placeholder {
+  color: #a0aec0;
+}
+
+.exercise-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.submit-workout {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #00d2d3 0%, #54a0ff 100%);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 210, 211, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 210, 211, 0.4);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #a0aec0;
+}
+
+.empty-state h3 {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
+/* Responsive Design - enklere og mer som original HTML */
+@media (max-width: 768px) {
+  .schedule-header,
+  .schedule-row {
+    grid-template-columns: 60px 1fr 100px;
+    gap: 15px;
   }
+  
+  .schedule-header div:last-child,
+  .schedule-row div:last-child {
+    display: none; /* Hide Action column on mobile */
+  }
+  
+  .exercise-header,
+  .exercise-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .exercise-actions {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 90%; /* Kan justeres etter behov */
+  }
+}

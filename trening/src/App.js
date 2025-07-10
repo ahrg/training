@@ -8,7 +8,7 @@ function App() {
   return (
     <HashRouter>
       <div className="body">
-        <NavBar />
+        <NavBar/>
         <Routes>
           <Route path="/" element={<WorkoutProgram />} />
           <Route path="/WorkoutProgram" element={<WorkoutProgram />} />

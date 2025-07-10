@@ -6,6 +6,8 @@ const NavBar = () => {
         <div className='NavBar color'>
             <Link to="./WorkoutProgram" className="NavButton">Workout Program</Link>
             <Link to="./Rotuine" className="NavButton">Routine</Link>
+            <p>Sign In</p>
+            <p>Sign off</p>
         </div>
     );
 };
