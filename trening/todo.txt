@@ -1,0 +1,2 @@
+Better styling
+Get a backend and a database to store everything in
